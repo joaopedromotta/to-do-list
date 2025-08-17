@@ -3,6 +3,7 @@ const formulario = document.getElementById("formulario");
 const containerMain = document.getElementById("container__main")
 const lista = document.getElementById("lista-impirica");
 const subtitulo = document.querySelector(".lista-vazia");
+const campoFormulario = document.getElementById("campo_buscativo");
 
 //Itens de consultoria
 let carregamentoMemoria = JSON.parse(localStorage.getItem("lista")) || [];
@@ -20,6 +21,7 @@ function renderLista() {
         subtitulo.classList.add("hidden");
         lista.classList.remove("hidden");
         lista.innerHTML = "";
+        campoFormulario.value = "";
         for (let i = 0; i < carregamentoMemoria.length; i++) {
             criarListaItem(carregamentoMemoria[i]);
         };
@@ -95,7 +97,7 @@ function criarListaItem(item) {
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     let contador = carregamentoMemoria.length + 1
-    const valorFormulario = document.getElementById("campo_buscativo").value;
+    const valorFormulario = campoFormulario.value;
     if (valorFormulario.trim() !== "" && valorFormulario.length <= 30) {
         const valores = {
             id: contador,

@@ -1,0 +1,116 @@
+:root{
+    --fonte-principal: "montserrat", sans-serif;
+    --cor-principal: #383030;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --cinza: #737373;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+}
+
+
+.container__box {
+    font-family: var(--fonte-principal);
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 16px;
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container__box h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.campo__busca-container {
+    width: 30vw;
+    border-radius: 24px;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.campo__busca-container input {
+    height: 30px;
+    width: 70%;
+    border-radius: 16px;
+    padding-left: 12px;
+}
+
+
+.campo__busca-container button {
+    height: 30px;
+    width: 100px;
+    background: var(--cinza);
+    color: var(--branco);
+    border-radius: 16px;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+}
+
+.campo__busca-container button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+.lista__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.lista__item-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0;
+    font-size: 18px;
+}
+
+.lista__item-data {
+    color: var(--cinza);
+}
+
+.lista__item-botao {
+    background: transparent;
+    padding: 6px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.lista__item-botao img {
+    width: 24px;
+    height: 24px;
+}
+
+.lista__item-botao:hover{
+    background-color: var(--cinza);
+}
+
+/* Itens de modularização */
+
+.hidden {
+    display: none;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: var(--cinza);
+    padding: 16px 0;
+}
+
+@media (max-width: 800px){
+    .campo__busca-container{
+        width: auto;
+    }
+}

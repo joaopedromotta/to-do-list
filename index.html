@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="container__box" id="container__main">
+
+        <h1>Lista de afazeres</h1>
+        <hr>
+
+        <form class="campo__busca-container" id="formulario">
+            <input 
+                type="text" 
+                placeholder="O que você quer fazer?" 
+                class="campo_busca" id="campo_buscativo" 
+                required maxlength="30"
+            >
+            <button id="btn-enviar">Enviar</button>
+        </form>
+
+        <hr>
+        <ul class="lista" id="lista-impirica">
+        </ul>
+        <h3 class="lista-vazia">Sua lista está vazia</h3>
+    </section>
+</body>
+
+<script src="script.js"></script>
+
+
+</html>
